@@ -311,6 +311,12 @@ class FestiMap {
         const endDate = this.formatDate(festival.dates.end);
         const year = new Date(festival.dates.start).getFullYear();
 
+        const deleteButton = this.isAdmin ? `
+            <button class="btn btn-delete-festival" onclick="window.festimap.deleteFestival(${festival.id})">
+                🗑️ Delete Festival
+            </button>
+        ` : '';
+
         return `
             <div class="festival-popup">
                 <h3>${festival.name}</h3>
@@ -323,8 +329,21 @@ class FestiMap {
                 <a href="${festival.website}" target="_blank" rel="noopener noreferrer" class="website-link">
                     🌐 Visit Website
                 </a>
+                ${deleteButton}
             </div>
         `;
+    }
+
+    deleteFestival(festivalId) {
+        const festivalIndex = this.festivals.findIndex(f => f.id === festivalId);
+        if (festivalIndex === -1) return;
+
+        const festival = this.festivals[festivalIndex];
+        if (confirm(`Are you sure you want to delete "${festival.name}"?`)) {
+            this.festivals.splice(festivalIndex, 1);
+            this.map.closePopup();
+            this.renderMarkers();
+        }
     }
 
     renderMarkers() {
@@ -408,7 +427,7 @@ class FestiMap {
         // Improved prompt to find more obscure festivals
         const prompt = `You are a music festival expert with deep knowledge of ${country}'s festival scene.
 
-I need you to find 5-7 REAL music festivals in ${country} that are NOT in this list: [${existingList}].
+I need you to find 25-30 REAL music festivals in ${country} that are NOT in this list: [${existingList}].
 
 Search for:
 1. Smaller regional festivals that might not be internationally famous
@@ -459,7 +478,7 @@ CRITICAL REQUIREMENTS:
                 contents: [{ parts: [{ text: prompt }] }],
                 generationConfig: {
                     temperature: 0.3, // Lower temperature for more factual responses
-                    maxOutputTokens: 4096,
+                    maxOutputTokens: 16384,
                 }
             })
         });
@@ -669,7 +688,15 @@ IMPORTANT:
         const resultsEl = document.getElementById('discovered-festivals');
         this.discoveredFestivals = festivals;
 
-        resultsEl.innerHTML = festivals.map((festival, index) => `
+        const addAllButton = `
+            <div class="add-all-section">
+                <button class="btn btn-add-all" onclick="window.festimap.addAllDiscoveredFestivals()">
+                    ➕ Add All (${festivals.length} festivals)
+                </button>
+            </div>
+        `;
+
+        const festivalCards = festivals.map((festival, index) => `
             <div class="discovered-festival-card" data-index="${index}">
                 <div class="discovered-festival-info">
                     <h4>${festival.name}</h4>
@@ -686,6 +713,54 @@ IMPORTANT:
                 </button>
             </div>
         `).join('');
+
+        resultsEl.innerHTML = addAllButton + festivalCards;
+    }
+
+    addAllDiscoveredFestivals() {
+        const country = document.getElementById('discover-country').value;
+        let addedCount = 0;
+
+        this.discoveredFestivals.forEach((festival, index) => {
+            // Skip if already added
+            const btn = document.querySelector(`.discovered-festival-card[data-index="${index}"] .btn-add-festival`);
+            if (btn && btn.classList.contains('added')) return;
+
+            const newFestival = {
+                id: this.festivals.length + 1,
+                name: festival.name,
+                coordinates: { lat: festival.lat, lng: festival.lng },
+                dates: { start: festival.startDate, end: festival.endDate },
+                genre: festival.genre,
+                website: festival.website,
+                description: festival.description,
+                country: country,
+                city: festival.city
+            };
+
+            this.festivals.push(newFestival);
+            this.updateFiltersAfterAdd(newFestival);
+            addedCount++;
+
+            // Update button state
+            if (btn) {
+                btn.classList.add('added');
+                btn.textContent = '✓ Added';
+                btn.onclick = null;
+            }
+        });
+
+        this.renderMarkers();
+
+        // Update Add All button
+        const addAllBtn = document.querySelector('.btn-add-all');
+        if (addAllBtn) {
+            addAllBtn.classList.add('added');
+            addAllBtn.textContent = `✓ Added ${addedCount} festivals`;
+            addAllBtn.onclick = null;
+        }
+
+        this.showStatus('success', `Added ${addedCount} festivals to the map!`);
     }
 
     addDiscoveredFestival(index) {
