@@ -277,3 +277,261 @@ body {
 .marker-indie {
     background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
 }
+
+/* AI Discovery Panel */
+.ai-panel {
+    background-color: #16213e;
+    border-top: 1px solid #0f3460;
+}
+
+.ai-panel-header {
+    padding: 1rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.ai-panel-header:hover {
+    background-color: #1a1a2e;
+}
+
+.ai-panel-header span:first-child {
+    font-weight: 600;
+    color: #667eea;
+}
+
+.toggle-icon {
+    transition: transform 0.3s;
+    color: #a0a0a0;
+}
+
+.ai-panel.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.ai-panel-content {
+    padding: 0 2rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.ai-panel.collapsed .ai-panel-content {
+    display: none;
+}
+
+.api-key-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.api-key-section label,
+.discover-section label {
+    display: block;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 0.5rem;
+}
+
+.api-key-input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.api-key-input-group input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0f3460;
+    border-radius: 6px;
+    background-color: #1a1a2e;
+    color: #eee;
+    font-size: 0.9rem;
+}
+
+.api-key-input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3);
+}
+
+.btn-icon {
+    padding: 0.5rem 0.75rem;
+    background-color: #0f3460;
+    border: 1px solid #0f3460;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: #1a1a2e;
+}
+
+.api-key-section small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.api-key-section small a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.api-key-section small a:hover {
+    text-decoration: underline;
+}
+
+.discover-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.discover-section select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #0f3460;
+    border-radius: 6px;
+    background-color: #1a1a2e;
+    color: #eee;
+    font-size: 0.9rem;
+    min-width: 200px;
+}
+
+.discover-section select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-discover {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    margin-top: 0.5rem;
+}
+
+.btn-discover:hover {
+    box-shadow: 0 4px 12px rgba(17, 153, 142, 0.4);
+}
+
+.btn-discover:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.ai-status {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+.ai-status.loading {
+    display: block;
+    background-color: #0f3460;
+    color: #667eea;
+}
+
+.ai-status.success {
+    display: block;
+    background-color: rgba(17, 153, 142, 0.2);
+    color: #38ef7d;
+}
+
+.ai-status.error {
+    display: block;
+    background-color: rgba(241, 39, 17, 0.2);
+    color: #f12711;
+}
+
+.discovered-festivals {
+    width: 100%;
+}
+
+.discovered-festival-card {
+    background-color: #1a1a2e;
+    border: 1px solid #0f3460;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.discovered-festival-info h4 {
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.discovered-festival-info p {
+    color: #a0a0a0;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.discovered-festival-info .festival-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.discovered-festival-info .festival-meta span {
+    font-size: 0.8rem;
+    color: #667eea;
+}
+
+.btn-add-festival {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.btn-add-festival.added {
+    background: #0f3460;
+    color: #38ef7d;
+    cursor: default;
+}
+
+.btn-add-festival.added:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Loading spinner */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #667eea;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Responsive AI panel */
+@media (max-width: 768px) {
+    .ai-panel-content {
+        padding: 0 1rem 1rem;
+    }
+
+    .api-key-section,
+    .discover-section {
+        width: 100%;
+        min-width: auto;
+    }
+}
