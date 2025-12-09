@@ -1,0 +1,344 @@
+{
+  "festivals": [
+    {
+      "id": 1,
+      "name": "Tomorrowland",
+      "coordinates": {
+        "lat": 51.0864,
+        "lng": 4.3779
+      },
+      "dates": {
+        "start": "2025-07-18",
+        "end": "2025-07-27"
+      },
+      "genre": "Electronic/EDM",
+      "website": "https://www.tomorrowland.com",
+      "description": "One of the world's largest and most iconic electronic dance music festivals, held in Boom, Belgium. Known for its elaborate stage designs and world-class DJ lineups.",
+      "country": "Belgium",
+      "city": "Boom"
+    },
+    {
+      "id": 2,
+      "name": "Glastonbury Festival",
+      "coordinates": {
+        "lat": 51.1559,
+        "lng": -2.5855
+      },
+      "dates": {
+        "start": "2025-06-25",
+        "end": "2025-06-29"
+      },
+      "genre": "Multi-genre",
+      "website": "https://www.glastonburyfestivals.co.uk",
+      "description": "The legendary British festival featuring music, dance, comedy, theatre, and arts. Held at Worthy Farm in Somerset, it's one of the largest greenfield festivals in the world.",
+      "country": "United Kingdom",
+      "city": "Pilton"
+    },
+    {
+      "id": 3,
+      "name": "Primavera Sound",
+      "coordinates": {
+        "lat": 41.3879,
+        "lng": 2.1942
+      },
+      "dates": {
+        "start": "2025-06-05",
+        "end": "2025-06-07"
+      },
+      "genre": "Indie/Alternative/Electronic",
+      "website": "https://www.primaverasound.com",
+      "description": "Barcelona's premier music festival featuring indie, rock, electronic, and experimental artists. Set along the Mediterranean coast at Parc del Fòrum.",
+      "country": "Spain",
+      "city": "Barcelona"
+    },
+    {
+      "id": 4,
+      "name": "Rock am Ring",
+      "coordinates": {
+        "lat": 50.3346,
+        "lng": 6.9428
+      },
+      "dates": {
+        "start": "2025-06-06",
+        "end": "2025-06-08"
+      },
+      "genre": "Rock/Metal",
+      "website": "https://www.rock-am-ring.com",
+      "description": "Germany's biggest rock festival held at the famous Nürburgring racing circuit. Twin festival with Rock im Park, featuring major rock and metal acts.",
+      "country": "Germany",
+      "city": "Nürburg"
+    },
+    {
+      "id": 5,
+      "name": "Roskilde Festival",
+      "coordinates": {
+        "lat": 55.6181,
+        "lng": 12.0556
+      },
+      "dates": {
+        "start": "2025-06-28",
+        "end": "2025-07-05"
+      },
+      "genre": "Multi-genre",
+      "website": "https://www.roskilde-festival.dk",
+      "description": "One of Europe's largest music festivals and the largest in Northern Europe. A non-profit event featuring rock, electronic, hip-hop, and world music.",
+      "country": "Denmark",
+      "city": "Roskilde"
+    },
+    {
+      "id": 6,
+      "name": "Sziget Festival",
+      "coordinates": {
+        "lat": 47.5539,
+        "lng": 19.0621
+      },
+      "dates": {
+        "start": "2025-08-06",
+        "end": "2025-08-11"
+      },
+      "genre": "Multi-genre",
+      "website": "https://szigetfestival.com",
+      "description": "The 'Island of Freedom' festival on Óbuda Island in Budapest. One of Europe's largest cultural festivals with music, art, and performances.",
+      "country": "Hungary",
+      "city": "Budapest"
+    },
+    {
+      "id": 7,
+      "name": "Sonar Festival",
+      "coordinates": {
+        "lat": 41.3545,
+        "lng": 2.1280
+      },
+      "dates": {
+        "start": "2025-06-19",
+        "end": "2025-06-21"
+      },
+      "genre": "Electronic/Experimental",
+      "website": "https://sonar.es",
+      "description": "Barcelona's International Festival of Advanced Music and New Media Art. Known for cutting-edge electronic music and multimedia exhibitions.",
+      "country": "Spain",
+      "city": "Barcelona"
+    },
+    {
+      "id": 8,
+      "name": "EXIT Festival",
+      "coordinates": {
+        "lat": 45.2526,
+        "lng": 19.8616
+      },
+      "dates": {
+        "start": "2025-07-10",
+        "end": "2025-07-13"
+      },
+      "genre": "Multi-genre/Electronic",
+      "website": "https://www.exitfest.org",
+      "description": "Award-winning festival held in the Petrovaradin Fortress. Born from a student movement, it's one of the most unique festival locations in Europe.",
+      "country": "Serbia",
+      "city": "Novi Sad"
+    },
+    {
+      "id": 9,
+      "name": "Pinkpop",
+      "coordinates": {
+        "lat": 50.9162,
+        "lng": 5.9620
+      },
+      "dates": {
+        "start": "2025-06-13",
+        "end": "2025-06-15"
+      },
+      "genre": "Rock/Pop",
+      "website": "https://www.pinkpop.nl",
+      "description": "The oldest and one of the largest annual pop and rock music festivals in the Netherlands, held in Landgraaf since 1970.",
+      "country": "Netherlands",
+      "city": "Landgraaf"
+    },
+    {
+      "id": 10,
+      "name": "Hellfest",
+      "coordinates": {
+        "lat": 47.0978,
+        "lng": -1.2539
+      },
+      "dates": {
+        "start": "2025-06-19",
+        "end": "2025-06-22"
+      },
+      "genre": "Metal/Hard Rock",
+      "website": "https://www.hellfest.fr",
+      "description": "France's largest metal festival featuring heavy metal, punk, and hardcore acts. Known for its intense atmosphere and impressive stage designs.",
+      "country": "France",
+      "city": "Clisson"
+    },
+    {
+      "id": 11,
+      "name": "Lollapalooza Berlin",
+      "coordinates": {
+        "lat": 52.5074,
+        "lng": 13.2786
+      },
+      "dates": {
+        "start": "2025-09-06",
+        "end": "2025-09-07"
+      },
+      "genre": "Multi-genre",
+      "website": "https://www.lollapaloozade.com",
+      "description": "The European edition of the famous American festival, held at the historic Olympiastadion grounds in Berlin with diverse musical acts.",
+      "country": "Germany",
+      "city": "Berlin"
+    },
+    {
+      "id": 12,
+      "name": "Mad Cool Festival",
+      "coordinates": {
+        "lat": 40.4650,
+        "lng": -3.6165
+      },
+      "dates": {
+        "start": "2025-07-10",
+        "end": "2025-07-12"
+      },
+      "genre": "Rock/Indie/Electronic",
+      "website": "https://madcoolfestival.es",
+      "description": "Madrid's major international music festival featuring rock, indie, and electronic artists in the Valdebebas area.",
+      "country": "Spain",
+      "city": "Madrid"
+    },
+    {
+      "id": 13,
+      "name": "Lowlands",
+      "coordinates": {
+        "lat": 52.4572,
+        "lng": 5.7614
+      },
+      "dates": {
+        "start": "2025-08-15",
+        "end": "2025-08-17"
+      },
+      "genre": "Multi-genre",
+      "website": "https://lowlands.nl",
+      "description": "A Travelling Feast' - a Dutch festival combining music, film, comedy, and visual arts. Known for its diverse lineup and creative atmosphere.",
+      "country": "Netherlands",
+      "city": "Biddinghuizen"
+    },
+    {
+      "id": 14,
+      "name": "Melt Festival",
+      "coordinates": {
+        "lat": 51.5683,
+        "lng": 12.2833
+      },
+      "dates": {
+        "start": "2025-07-17",
+        "end": "2025-07-19"
+      },
+      "genre": "Electronic/Indie",
+      "website": "https://www.meltfestival.de",
+      "description": "Unique festival set in an open-air industrial museum in Ferropolis. Known for electronic and indie music with stunning industrial backdrops.",
+      "country": "Germany",
+      "city": "Gräfenhainichen"
+    },
+    {
+      "id": 15,
+      "name": "NOS Alive",
+      "coordinates": {
+        "lat": 38.6979,
+        "lng": -9.2231
+      },
+      "dates": {
+        "start": "2025-07-10",
+        "end": "2025-07-12"
+      },
+      "genre": "Rock/Indie/Electronic",
+      "website": "https://nosalive.com",
+      "description": "Portugal's biggest music festival held along the Tagus River in Lisbon. Features international rock, indie, and electronic acts.",
+      "country": "Portugal",
+      "city": "Lisbon"
+    },
+    {
+      "id": 16,
+      "name": "Open'er Festival",
+      "coordinates": {
+        "lat": 54.4879,
+        "lng": 18.5439
+      },
+      "dates": {
+        "start": "2025-07-02",
+        "end": "2025-07-05"
+      },
+      "genre": "Multi-genre",
+      "website": "https://opener.pl",
+      "description": "Poland's largest open-air music festival in Gdynia. Features international headliners and emerging artists across multiple genres.",
+      "country": "Poland",
+      "city": "Gdynia"
+    },
+    {
+      "id": 17,
+      "name": "Flow Festival",
+      "coordinates": {
+        "lat": 60.1866,
+        "lng": 24.9621
+      },
+      "dates": {
+        "start": "2025-08-08",
+        "end": "2025-08-10"
+      },
+      "genre": "Multi-genre/Electronic",
+      "website": "https://www.flowfestival.com",
+      "description": "Helsinki's urban festival known for its emphasis on sustainability and eclectic lineup of indie, electronic, and soul music.",
+      "country": "Finland",
+      "city": "Helsinki"
+    },
+    {
+      "id": 18,
+      "name": "Way Out West",
+      "coordinates": {
+        "lat": 57.6932,
+        "lng": 11.9530
+      },
+      "dates": {
+        "start": "2025-08-07",
+        "end": "2025-08-09"
+      },
+      "genre": "Multi-genre",
+      "website": "https://www.wayoutwest.se",
+      "description": "Gothenburg's eco-friendly festival in Slottsskogen park. Known for diverse music programming and strong environmental commitment.",
+      "country": "Sweden",
+      "city": "Gothenburg"
+    },
+    {
+      "id": 19,
+      "name": "Øya Festival",
+      "coordinates": {
+        "lat": 59.9046,
+        "lng": 10.7665
+      },
+      "dates": {
+        "start": "2025-08-05",
+        "end": "2025-08-09"
+      },
+      "genre": "Indie/Rock/Electronic",
+      "website": "https://oyafestivalen.no",
+      "description": "Oslo's premier urban festival in the medieval park Tøyenparken. Celebrated for its environmental sustainability and quality music curation.",
+      "country": "Norway",
+      "city": "Oslo"
+    },
+    {
+      "id": 20,
+      "name": "Electric Castle",
+      "coordinates": {
+        "lat": 46.8918,
+        "lng": 23.4773
+      },
+      "dates": {
+        "start": "2025-07-16",
+        "end": "2025-07-20"
+      },
+      "genre": "Electronic/Multi-genre",
+      "website": "https://electriccastle.ro",
+      "description": "Unique festival set in the domain of Banffy Castle in Transylvania. Combines music with art installations in a magical setting.",
+      "country": "Romania",
+      "city": "Cluj-Napoca"
+    }
+  ]
+}
