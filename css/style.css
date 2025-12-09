@@ -1,0 +1,279 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Controls */
+.controls {
+    background-color: #16213e;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #0f3460;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #0f3460;
+    border-radius: 6px;
+    background-color: #1a1a2e;
+    color: #eee;
+    font-size: 0.9rem;
+    min-width: 150px;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.3);
+}
+
+.btn {
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Map container */
+#map {
+    flex: 1;
+    min-height: 500px;
+    z-index: 1;
+}
+
+/* Stats bar */
+.stats {
+    background-color: #16213e;
+    padding: 0.75rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    border-top: 1px solid #0f3460;
+}
+
+#festival-count {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Custom popup styles */
+.leaflet-popup-content-wrapper {
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    color: #eee;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid #0f3460;
+}
+
+.leaflet-popup-content {
+    margin: 0;
+    min-width: 280px;
+    max-width: 320px;
+}
+
+.leaflet-popup-tip {
+    background: #16213e;
+    border: 1px solid #0f3460;
+}
+
+.leaflet-popup-close-button {
+    color: #a0a0a0 !important;
+    font-size: 20px !important;
+    padding: 8px 8px 0 0 !important;
+}
+
+.leaflet-popup-close-button:hover {
+    color: #667eea !important;
+}
+
+/* Festival popup card */
+.festival-popup {
+    padding: 1rem;
+}
+
+.festival-popup h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.festival-popup .location {
+    font-size: 0.85rem;
+    color: #a0a0a0;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.festival-popup .dates {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.festival-popup .genre {
+    display: inline-block;
+    background-color: #0f3460;
+    color: #667eea;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    margin-left: 0.5rem;
+}
+
+.festival-popup .description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #c0c0c0;
+    margin-bottom: 1rem;
+}
+
+.festival-popup .website-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.25rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.festival-popup .website-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Custom marker styles */
+.festival-marker {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .controls {
+        padding: 1rem;
+    }
+
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-group select,
+    .filter-group input {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .leaflet-popup-content {
+        min-width: 250px;
+        max-width: 280px;
+    }
+}
+
+/* Genre-specific marker colors */
+.marker-electronic {
+    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+}
+
+.marker-rock {
+    background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);
+}
+
+.marker-metal {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    border-color: #f5af19;
+}
+
+.marker-multi {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.marker-indie {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
