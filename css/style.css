@@ -746,6 +746,58 @@ body {
     display: none !important;
 }
 
+/* Add All Button */
+.add-all-section {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #0f3460;
+}
+
+.btn-add-all {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-add-all:hover {
+    box-shadow: 0 4px 16px rgba(17, 153, 142, 0.5);
+}
+
+.btn-add-all.added {
+    background: #0f3460;
+    color: #38ef7d;
+    cursor: default;
+}
+
+.btn-add-all.added:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Delete Festival Button */
+.btn-delete-festival {
+    display: block;
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-delete-festival:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(241, 39, 17, 0.4);
+}
+
 /* Responsive AI panel */
 @media (max-width: 768px) {
     .ai-panel-content {
