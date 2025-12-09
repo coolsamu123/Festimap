@@ -74,18 +74,40 @@ class FestiMap {
 
     setupEventListeners() {
         // Filter event listeners
+        document.getElementById('month-filter').addEventListener('change', () => this.filterFestivals());
         document.getElementById('genre-filter').addEventListener('change', () => this.filterFestivals());
         document.getElementById('country-filter').addEventListener('change', () => this.filterFestivals());
         document.getElementById('search').addEventListener('input', () => this.filterFestivals());
         document.getElementById('reset-filters').addEventListener('click', () => this.resetFilters());
     }
 
+    getFestivalMonth(festival) {
+        // Get the month from the start date (1-12)
+        const startDate = new Date(festival.dates.start);
+        return startDate.getMonth() + 1;
+    }
+
+    festivalInMonth(festival, month) {
+        // Check if festival runs during a specific month
+        const startDate = new Date(festival.dates.start);
+        const endDate = new Date(festival.dates.end);
+
+        // Get months (1-12)
+        const startMonth = startDate.getMonth() + 1;
+        const endMonth = endDate.getMonth() + 1;
+
+        // Festival spans this month if month is between start and end months
+        return month >= startMonth && month <= endMonth;
+    }
+
     getFilteredFestivals() {
+        const monthFilter = document.getElementById('month-filter').value;
         const genreFilter = document.getElementById('genre-filter').value;
         const countryFilter = document.getElementById('country-filter').value;
         const searchTerm = document.getElementById('search').value.toLowerCase();
 
         return this.festivals.filter(festival => {
+            const matchesMonth = monthFilter === 'all' || this.festivalInMonth(festival, parseInt(monthFilter));
             const matchesGenre = genreFilter === 'all' || festival.genre === genreFilter;
             const matchesCountry = countryFilter === 'all' || festival.country === countryFilter;
             const matchesSearch = searchTerm === '' ||
@@ -93,7 +115,7 @@ class FestiMap {
                 festival.city.toLowerCase().includes(searchTerm) ||
                 festival.description.toLowerCase().includes(searchTerm);
 
-            return matchesGenre && matchesCountry && matchesSearch;
+            return matchesMonth && matchesGenre && matchesCountry && matchesSearch;
         });
     }
 
@@ -102,6 +124,7 @@ class FestiMap {
     }
 
     resetFilters() {
+        document.getElementById('month-filter').value = 'all';
         document.getElementById('genre-filter').value = 'all';
         document.getElementById('country-filter').value = 'all';
         document.getElementById('search').value = '';
