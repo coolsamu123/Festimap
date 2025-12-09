@@ -63,6 +63,70 @@
         <span id="festival-count">0 festivals</span> shown on map
     </div>
 
+    <!-- AI Discovery Panel -->
+    <div class="ai-panel">
+        <div class="ai-panel-header" id="ai-panel-toggle">
+            <span>🤖 AI Festival Discovery</span>
+            <span class="toggle-icon">▼</span>
+        </div>
+        <div class="ai-panel-content" id="ai-panel-content">
+            <div class="api-key-section">
+                <label for="gemini-api-key">Gemini API Key:</label>
+                <div class="api-key-input-group">
+                    <input type="password" id="gemini-api-key" placeholder="Enter your Gemini API key...">
+                    <button id="toggle-key-visibility" class="btn-icon" title="Show/Hide API Key">👁️</button>
+                </div>
+                <small>Get your free API key at <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></small>
+            </div>
+            <div class="discover-section">
+                <label for="discover-country">Discover festivals in:</label>
+                <select id="discover-country">
+                    <option value="">Select a country...</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Montenegro">Montenegro</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="North Macedonia">North Macedonia</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                </select>
+                <button id="discover-btn" class="btn btn-discover">🔍 Discover New Festivals</button>
+            </div>
+            <div id="ai-status" class="ai-status"></div>
+            <div id="discovered-festivals" class="discovered-festivals"></div>
+        </div>
+    </div>
+
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
